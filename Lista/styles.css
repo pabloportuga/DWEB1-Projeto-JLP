@@ -1,0 +1,23 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+ /* Cor personalizada para os botões do carrossel */
+ .carousel-control-prev-icon,
+ .carousel-control-next-icon {
+   background-color: #ff5733; /* Cor de fundo dos ícones */
+ }
+
+ .carousel-control-prev,
+ .carousel-control-next {
+   color: #fff; /* Cor do texto (se houver) */
+   background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+   border-radius: 50%;
+ }
+
+ .text-center{
+    background-color: black !important;
+    color: white !important;
+ }
