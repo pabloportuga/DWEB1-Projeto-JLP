@@ -41,6 +41,8 @@ function cadastro(veiculo) {
 
     // Salva no localStorage
     localStorage.setItem("veiculos", JSON.stringify(veiculosSalvos));
+
+    mostrarVeiculos(); 
 }
 
 // Função para mostrar veículos cadastrados
@@ -54,10 +56,12 @@ function mostrarVeiculos() {
     // Adiciona cada veículo na lista
     veiculosSalvos.forEach((veiculo, index) => {
         const li = document.createElement("li");
-        li.textContent = `${veiculo.marca} ${veiculo.modelo} (${veiculo.anoFabricacao})`;
+        li.textContent = `${veiculo.marca} ${veiculo.modelo} (${veiculo.ano})`;
         listaVeiculos.appendChild(li);
     });
 }
 
-// Chama a função para mostrar os veículos cadastrados quando a página carregar
-window.onload = mostrarVeiculos;
+document.addEventListener("DOMContentLoaded", () => {
+    mostrarVeiculos(); // Exibe os veículos cadastrados ao carregar a página
+});
+

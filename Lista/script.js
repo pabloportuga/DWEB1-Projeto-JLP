@@ -29,11 +29,11 @@ function criaCartao(veiculo){
   <img src="${veiculo.imagem}" class="card-img-top" alt="${veiculo.modelo}">
   <div class="card-body">
     <h5 class="card-title">${veiculo.modelo}</h5>
-    <p class="card-text">Um veículo da marca ${veiculo.marca}, fabricado em ${veiculo.anoFabricacao}</p>
+    <p class="card-text">Um veículo da marca ${veiculo.marca}, fabricado em ${veiculo.ano}</p>
   </div>
   <ul class="list-group list-group-flush style= "display: flex;">
     <li class="list-group-item">COR: ${veiculo.cor},  TIPO: ${veiculo.tipo}</li>
-    <li class="list-group-item">Quilometragem: ${veiculo.quilometragem}, Numero de portas:  ${veiculo.numeroPortas}</li>
+    <li class="list-group-item">Quilometragem: ${veiculo.quilometragem}, Numero de portas:  ${veiculo.portas}</li>
   </ul>
   <div class="card-body">
     <a href="#" class="card-link">Card link</a>
