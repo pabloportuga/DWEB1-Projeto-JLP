@@ -26,9 +26,6 @@ document.getElementById("formCadastro").addEventListener("submit", (event) => {
 
     // Feedback ao usuário (opcional)
     alert("Veículo cadastrado com sucesso!");
-
-    // Atualiza a lista de veículos cadastrados
-    mostrarVeiculos();
 });
 
 // Função de cadastro
@@ -41,27 +38,4 @@ function cadastro(veiculo) {
 
     // Salva no localStorage
     localStorage.setItem("veiculos", JSON.stringify(veiculosSalvos));
-
-    mostrarVeiculos(); 
 }
-
-// Função para mostrar veículos cadastrados
-function mostrarVeiculos() {
-    const veiculosSalvos = JSON.parse(localStorage.getItem("veiculos")) || [];
-    const listaVeiculos = document.getElementById("listaVeiculos");
-
-    // Limpa a lista antes de atualizá-la
-    listaVeiculos.innerHTML = "";
-
-    // Adiciona cada veículo na lista
-    veiculosSalvos.forEach((veiculo, index) => {
-        const li = document.createElement("li");
-        li.textContent = `${veiculo.marca} ${veiculo.modelo} (${veiculo.ano})`;
-        listaVeiculos.appendChild(li);
-    });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    mostrarVeiculos(); // Exibe os veículos cadastrados ao carregar a página
-});
-

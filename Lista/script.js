@@ -23,22 +23,20 @@ fetch('https://my-json-server.typicode.com/Joaremio/veiculos-api/veiculos')
     console.error("Falha ao buscar dados");
   })
 
-function criaCartao(veiculo){
-  return `
-  <div class="card mx-auto" style="width: 40rem;">
-  <img src="${veiculo.imagem}" class="card-img-top" alt="${veiculo.modelo}">
-  <div class="card-body">
-    <h5 class="card-title">${veiculo.modelo}</h5>
-    <p class="card-text">Um veículo da marca ${veiculo.marca}, fabricado em ${veiculo.ano}</p>
-  </div>
-  <ul class="list-group list-group-flush style= "display: flex;">
-    <li class="list-group-item">COR: ${veiculo.cor},  TIPO: ${veiculo.tipo}</li>
-    <li class="list-group-item">Quilometragem: ${veiculo.quilometragem}, Numero de portas:  ${veiculo.portas}</li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
-</div>
-`;
-}
+
+  function criaCartao(veiculo) {
+    return `
+    <div class="card mx-auto" style="width: 40rem;">
+      <img src="${veiculo.imagem}" class="card-img-top" alt="${veiculo.modelo}">
+      <div class="card-body">
+        <h5 class="card-title">${veiculo.modelo}</h5>
+        <p class="card-text">Um veículo da marca ${veiculo.marca}, fabricado em ${veiculo.ano}</p>
+      </div>
+      <ul class="list-group list-group-flush" style="display: flex; flex-direction: column;">
+        <li class="list-group-item">COR: ${veiculo.cor},  TIPO: ${veiculo.tipo}</li>
+        <li class="list-group-item">Quilometragem: ${veiculo.quilometragem} KM, Número de portas:  ${veiculo.portas}</li>
+      </ul>
+    </div>
+    `;
+  }
+  
